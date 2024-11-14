@@ -1,0 +1,276 @@
+/* styles.css */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f3f4f6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.login-container {
+  display: flex;
+  width: 900px;
+  height: 500px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+  background: white;
+  flex-direction: row; /* Default layout for larger screens */
+}
+
+.welcome-section {
+  width: 55%;
+  background: linear-gradient(135deg, #5a07b4, #2575fc);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  text-align: center;
+}
+
+.welcome-section h1 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+}
+
+.welcome-section p {
+  font-size: 1rem;
+  line-height: 1.6;
+  max-width: 300px;
+}
+
+/* Bouton commun à réutiliser */
+.blue-button {
+  width: 100%;
+  max-width: 200px;
+  padding: 10px;
+  background: linear-gradient(135deg, #ffffff, #e3e3e3);
+  color: #628df4;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.blue-button:hover {
+  opacity: 0.9;
+  background: #ffffff;
+}
+
+.login-section {
+  width: 45%;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+.login-section h2 {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+form {
+  width: 100%;
+  max-width: 300px;
+}
+
+.input-group {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px 30px; /* Espace pour l'icône à gauche */
+  font-size: 1rem;
+  height: 40px; /* Assurez-vous que la hauteur des inputs soit la même */
+  border: 1px solid #7a5ab5;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.input-group i {
+  position: absolute;
+  left: 10px; /* Icône à gauche */
+  top: 50%;
+  transform: translateY(-50%);
+  color: #7a5ab5;
+}
+
+.password-input {
+  position: relative;
+  margin-bottom: 20px; /* Ajout de l'espace entre le champ de mot de passe et l'élément suivant */
+}
+
+.password-input input {
+  width: 100%;
+  padding-left: 30px; /* Espace pour l'icône à gauche */
+  padding-right: 40px; /* Espace pour l'icône de l'œil à droite */
+  font-size: 1rem;
+  height: 40px; /* Même hauteur que l'input de l'email */
+  border: 1px solid #7a5ab5;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.password-input i.password-icon {
+  position: absolute;
+  left: 10px; /* Icône du mot de passe à gauche */
+  top: 50%;
+  transform: translateY(-50%);
+  color: #7a5ab5;
+}
+
+.password-input i.eye-icon {
+  position: absolute;
+  right: 10px; /* Icône de l'œil à droite */
+  top: 50%;
+  transform: translateY(-50%);
+  color: #7a5ab5;
+  cursor: pointer;
+}
+
+.options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px; /* Espacement égal entre la zone de mot de passe et cette section */
+  width: 100%;
+}
+
+.options label {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.options a {
+  color: #6a11cb;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.options a:hover {
+  text-decoration: underline;
+}
+
+.login-button {
+  width: 100%;
+  padding: 10px;
+  background: linear-gradient(135deg, #5a07b4, #2575fc);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.login-button:hover {
+  opacity: 0.9;
+}
+
+/* Responsiveness - Media Queries */
+
+/* For smaller screens */
+@media (max-width: 768px) {
+  .login-container {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    padding: 20px;
+  }
+
+  .welcome-section {
+    width: 100%;
+    height: auto;
+    padding: 30px;
+  }
+
+  .login-section {
+    width: 100%;
+    height: auto;
+    padding: 30px;
+  }
+
+  .welcome-section h1 {
+    font-size: 1.8rem;
+  }
+
+  .welcome-section p {
+    font-size: 0.9rem;
+    max-width: none;
+  }
+
+  .login-section h2 {
+    font-size: 1.3rem;
+  }
+
+  .blue-button {
+    max-width: 100%;
+  }
+
+  .input-group input,
+  .password-input input,
+  .login-button {
+    font-size: 1rem;
+    padding: 12px;
+  }
+
+  .input-group i,
+  .password-input i.password-icon,
+  .password-input i.eye-icon {
+    font-size: 1rem;
+  }
+}
+
+/* For very small screens (phones in portrait mode) */
+@media (max-width: 480px) {
+  .welcome-section h1 {
+    font-size: 1.5rem;
+  }
+
+  .welcome-section p {
+    font-size: 0.8rem;
+    max-width: 100%;
+  }
+
+  .login-section h2 {
+    font-size: 1.2rem;
+  }
+
+  .input-group input,
+  .password-input input,
+  .login-button {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+
+  .blue-button {
+    max-width: 100%;
+  }
+
+  .options {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 10px;
+  }
+
+  .options a {
+    font-size: 0.8rem;
+  }
+
+  .login-container {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+  }
+}
