@@ -1,0 +1,234 @@
+/* Style global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+ /* background: #f3f4f6;*/
+ background: url('images/bglogin.jpg');
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Conteneur de la page */
+.page-container {
+  display: flex;
+  width: 900px;
+  height: 500px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+  background: white;
+}
+
+/* Section de gauche (formulaire d'inscription) */
+.left-section {
+  width: 55%;
+  padding: 30px;
+  color: #333333;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.left-section h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.8em;
+}
+
+/* Formulaire d'inscription */
+.signup-form {
+  position: relative;
+}
+
+.signup-form input {
+  padding: 12px;
+  margin-bottom: 12px;
+  border: 2px solid #7a5ab5;
+  border-radius: 6px;
+  font-size: 1em;
+  background-color: #ffffff;
+  color: #333333;
+  transition: all 0.3s ease;
+  width: 100%;  /* Ajuster la largeur à 100% */
+  box-sizing: border-box;
+  padding-left: 40px; /* Espace pour les icônes */
+}
+
+/* Icône à l'intérieur des champs */
+.signup-form .input-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-60%);
+  font-size: 18px;
+  color: #7a5ab5;
+}
+
+/* Zone de saisie du mot de passe avec l'icône de l'œil */
+.password-container {
+  position: relative;
+}
+
+.password-container input {
+  padding-right: 40px; /* Espace pour l'icône de visibilité à droite */
+  padding-left: 40px;  /* Espace pour l'icône du mot de passe (si nécessaire) */
+}
+
+/* Icône de visibilité du mot de passe */
+.password-container .eye-icon {
+  position: absolute;
+  left: 90%;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #7a5ab5;
+  cursor: pointer;
+}
+
+/* Bouton d'inscription */
+button[type="submit"] {
+  background: linear-gradient(135deg, #5a07b4, #2575fc);
+  color: white;
+  border: none;
+  padding: 15px 0;
+  border-radius: 6px;
+  font-size: 1.1em;
+  cursor: pointer;
+  margin: 20px auto;
+  display: block;
+  width: 60%;
+  transition: all 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background: linear-gradient(135deg, #2575fc, #5a07b4);
+  transform: scale(1.05);
+}
+
+/* Section de droite (Bienvenue) */
+.right-section {
+  width: 45%;
+  background: linear-gradient(135deg, #5a07b4, #2575fc);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: bold;
+  padding: 20px;
+}
+
+.blue-button {
+  width: 100%;
+  max-width: 200px;
+  padding: 10px;
+  background: linear-gradient(135deg, #ffffff, #e3e3e3);
+  color: #628df4;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.blue-button:hover {
+  opacity: 0.9;
+  background: #ffffff;
+}
+
+/* Responsiveness - Media Queries */
+
+/* Pour les écrans plus petits (tablettes et mobiles) */
+@media (max-width: 768px) {
+  .page-container {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    padding: 20px;
+  }
+
+  .left-section {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .right-section {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .left-section h2 {
+    font-size: 1.5em;
+  }
+
+  /* Ajuster la taille des champs de saisie */
+  .signup-form input {
+    padding: 10px;
+    font-size: 1rem;
+  }
+
+  .signup-form .input-icon {
+    font-size: 16px;
+  }
+
+  button[type="submit"] {
+    width: 80%;
+  }
+
+  .blue-button {
+    max-width: 100%;
+  }
+}
+
+/* Pour les très petits écrans (téléphones en portrait) */
+@media (max-width: 480px) {
+  .page-container {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+  }
+
+  .left-section {
+    padding: 15px;
+  }
+
+  .right-section {
+    padding: 15px;
+  }
+
+  .left-section h2 {
+    font-size: 1.3em;
+  }
+
+  .signup-form input {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  .signup-form .input-icon {
+    font-size: 14px;
+  }
+
+  button[type="submit"] {
+    width: 90%;
+  }
+
+  .blue-button {
+    max-width: 100%;
+  }
+
+  .right-section {
+    font-size: 1em;
+    padding: 15px;
+  }
+}
